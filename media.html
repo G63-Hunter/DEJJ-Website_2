@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Showcase | Dejj Engineering & Investments Solutions</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dejj: { red: '#E31E24', blue: '#1A4A94', cyan: '#8AD1E8', dark: '#111827' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Outfit', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .swiper {
+            width: 100%;
+            height: 600px;
+            border-radius: 3rem;
+        }
+
+        .swiper-slide img,
+        .swiper-slide video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: white !important;
+            background: rgba(0, 0, 0, 0.3);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            backdrop-filter: blur(4px);
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 20px !important;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #E31E24 !important;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans">
+    <nav class="fixed top-0 w-full z-50 glass transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center">
+                    <img src="Images/LOGO.png" alt="Dejj Logo" class="h-24 w-auto object-contain py-1">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-sm font-semibold hover:text-dejj-red transition-colors capitalize">Home</a>
+                    <a href="about.html"
+                        class="text-sm font-semibold hover:text-dejj-red transition-colors capitalize">About</a>
+                    <a href="services.html"
+                        class="text-sm font-semibold hover:text-dejj-red transition-colors capitalize">Services</a>
+                    <a href="projects.html"
+                        class="text-sm font-semibold text-dejj-red transition-colors capitalize">Projects</a>
+                    <a href="index.html#contact"
+                        class="bg-dejj-blue text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-dejj-red transition-all">Contact
+                        Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-20 bg-dejj-dark text-white text-center">
+        <h1 class="font-display text-5xl font-extrabold mb-4">Project Media <span
+                class="text-dejj-red italic">Showcase</span></h1>
+        <p class="text-white/60">Capturing the progress and perfection of our engineering feats.</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-24">
+        <!-- Main Slider -->
+        <div class="swiper mySwiper mb-20 shadow-2xl">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="Images/photo_2026-02-14_17-33-13.jpg" alt="Project Image 1">
+                </div>
+                <div class="swiper-slide">
+                    <video controls class="w-full h-full object-cover">
+                        <source src="Images/video_2026-02-14_17-12-40.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="swiper-slide">
+                    <img src="Images/photo_2026-02-10_13-24-24.jpg" alt="Project Image 2">
+                </div>
+                <div class="swiper-slide">
+                    <video controls class="w-full h-full object-cover">
+                        <source src="Images/video_2026-02-14_17-12-45.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="swiper-slide">
+                    <img src="Images/photo_2026-02-10_13-24-35.jpg" alt="Project Image 3">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center reveal bg-white p-12 rounded-[3rem] shadow-sm">
+            <div>
+                <span class="text-dejj-red font-bold uppercase tracking-widest text-sm mb-4 block">Visual
+                    Evidence</span>
+                <h2 class="font-display text-4xl font-extrabold text-dejj-blue mb-6">Our Work in Motion</h2>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    At Dejj Engineering, we believe that transparency is the foundation of trust. This gallery showcases
+                    our teams in action, from the initial geological survey to the final gush of clean, pressurized
+                    water.
+                </p>
+                <div class="mt-8 flex gap-6">
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-extrabold text-dejj-red">20+</span>
+                        <span class="text-xs font-bold uppercase text-slate-400">Videos Recorded</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-extrabold text-dejj-blue">100+</span>
+                        <span class="text-xs font-bold uppercase text-slate-400">Site Photos</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="Images/photo_2026-02-10_13-30-03.jpg" class="rounded-3xl shadow-lg mt-12">
+                <img src="Images/photo_2026-02-10_13-30-15.jpg" class="rounded-3xl shadow-lg">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dejj-dark pt-20 pb-10 text-white/70 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="space-y-6">
+                    <img src="Images/LOGO.png" alt="Dejj Logo" class="h-16 w-auto brightness-0 invert">
+                    <p class="text-sm leading-relaxed">
+                        Pioneering water engineering and consultancy in Uganda since 2024. Providing sustainable
+                        solutions for a better tomorrow.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-dejj-blue hover:text-white transition-all"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-dejj-red hover:text-white transition-all"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-dejj-blue hover:text-white transition-all"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/256000000000" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-green-500 hover:text-white transition-all"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="index.html" class="hover:text-dejj-red transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-dejj-red transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-dejj-red transition-colors">Our Services</a></li>
+                        <li><a href="projects.html" class="hover:text-dejj-red transition-colors">Success Stories</a>
+                        </li>
+                        <li><a href="index.html#contact" class="hover:text-dejj-red transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Expertise -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-6">Expertise</h4>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="services.html" class="hover:text-dejj-blue transition-colors">Borehole Drilling</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-dejj-blue transition-colors">Hydrogeological
+                                Surveys</a></li>
+                        <li><a href="services.html" class="hover:text-dejj-blue transition-colors">Water Consultancy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex gap-3"><i class="fa-solid fa-location-dot text-dejj-red"></i> Kampala, Uganda
+                        </li>
+                        <li class="flex gap-3"><i class="fa-solid fa-phone text-dejj-blue"></i> +256 [000] 000 000</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-envelope text-dejj-cyan"></i>
+                            info@dejjengineering.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold uppercase tracking-[0.2em]">
+                <p>© 2024 DEJJ Engineering & Investments Solutions. All rights reserved.</p>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        });
+    </script>
+</body>
+
+</html>
