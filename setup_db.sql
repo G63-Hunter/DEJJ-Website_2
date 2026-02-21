@@ -31,9 +31,19 @@ CREATE TABLE IF NOT EXISTS inquiries (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Default Admin Account (Username: admin_dejj, Password: password123)
--- In a real app, you'd use password_hash() in PHP to generate this.
-INSERT IGNORE INTO admins (username, password) VALUES ('admin_dejj', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
+CREATE TABLE IF NOT EXISTS project_media (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    project_id INT NOT NULL,
+    file_url VARCHAR(255) NOT NULL,
+    file_type ENUM('image', 'video') NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE
+);
+
+-- Default Admin Account
+-- Recommended: Run setup.php in your browser to create the admin account securely using PHP's password_hash().
+-- Alternatively, if you must use SQL directly, ensure you use a valid Bcrypt hash.
+-- INSERT IGNORE INTO admins (username, password) VALUES ('admin_dejj', '[HASH_GENERATED_BY_PHP]');
 
 -- Sample Projects
 INSERT IGNORE INTO projects (title, location, description, category, image_url) VALUES 

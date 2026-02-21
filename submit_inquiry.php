@@ -17,8 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Redirect back with success (in a real app, maybe a session message)
         header("Location: index.php?status=sent#contact");
         exit;
-    }
-    catch (PDOException $e) {
+    } catch (PDOException $e) {
         die("Error sending inquiry: " . $e->getMessage());
     }
 }
